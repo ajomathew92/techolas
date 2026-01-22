@@ -1,0 +1,548 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wego - Compare & Book Cheap Flights, Hotels & Travel</title>
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container-xxl">
+            <a class="navbar-brand fw-bold" href="#">
+                <span class="text-primary">W</span><span class="text-danger">e</span><span class="text-warning">g</span><span class="text-success">o</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="flights.html"><i class="bi bi-airplane"></i> Flights</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotels.html"><i class="bi bi-building"></i> Hotels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="packages.html"><i class="bi bi-briefcase"></i> Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="activities.html"><i class="bi bi-camera"></i> Activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="deals.html"><i class="bi bi-tag"></i> Deals</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button">
+                            <i class="bi bi-three-dots"></i> More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+                            <li><a class="dropdown-item" href="about.html"><i class="bi bi-info-circle"></i> About Us</a></li>
+                            <li><a class="dropdown-item" href="contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
+                            <li><a class="dropdown-item" href="help.html"><i class="bi bi-question-circle"></i> Help</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="blog.html"><i class="bi bi-newspaper"></i> Blog</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a href="signin.html" class="btn btn-outline-primary me-2">
+                        <i class="bi bi-box-arrow-in-right"></i> Sign In
+                    </a>
+                    <a href="signup.html" class="btn btn-primary">
+                        <i class="bi bi-person-plus"></i> Sign Up
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+    <section class="hero-section">
+        <div class="container-xxl">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="hero-content text-center py-5">
+                        <h1 class="display-3 fw-bold mb-4 text-white">Find the Best Travel Deals</h1>
+                        <p class="lead text-white-50 mb-5">Compare prices from hundreds of travel sites in one search</p>
+                        
+                        
+                        <div class="search-tabs-wrapper">
+                            <input type="radio" name="searchTab" id="flights-tab" class="tab-radio" checked>
+                            <input type="radio" name="searchTab" id="hotels-tab" class="tab-radio">
+                            <input type="radio" name="searchTab" id="packages-tab" class="tab-radio">
+                            
+                            <ul class="nav nav-pills justify-content-center mb-4" id="searchTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <label for="flights-tab" class="nav-link active" id="flights-tab-label">
+                                        <i class="bi bi-airplane"></i> Flights
+                                    </label>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <label for="hotels-tab" class="nav-link" id="hotels-tab-label">
+                                        <i class="bi bi-building"></i> Hotels
+                                    </label>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <label for="packages-tab" class="nav-link" id="packages-tab-label">
+                                        <i class="bi bi-briefcase"></i> Packages
+                                    </label>
+                                </li>
+                            </ul>
+
+                            
+                            <div class="tab-content" id="searchTabsContent">
+                            
+                            <div class="tab-pane" id="flights" role="tabpanel">
+                                <div class="search-card bg-white rounded-4 shadow-lg p-4">
+                                    <form class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-semibold">From</label>
+                                            <input type="text" class="form-control form-control-lg" placeholder="City or Airport">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-semibold">To</label>
+                                            <input type="text" class="form-control form-control-lg" placeholder="City or Airport">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="form-label fw-semibold">Depart</label>
+                                            <input type="date" class="form-control form-control-lg">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="form-label fw-semibold">Return</label>
+                                            <input type="date" class="form-control form-control-lg">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="form-label fw-semibold">Travelers</label>
+                                            <select class="form-select form-select-lg">
+                                                <option>1 Adult</option>
+                                                <option>2 Adults</option>
+                                                <option>3 Adults</option>
+                                                <option>4+ Adults</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary btn-lg w-100">
+                                                <i class="bi bi-search"></i> Search Flights
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            
+                            <div class="tab-pane" id="hotels" role="tabpanel">
+                                <div class="search-card bg-white rounded-4 shadow-lg p-4">
+                                    <form class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-semibold">Destination</label>
+                                            <input type="text" class="form-control form-control-lg" placeholder="City, Hotel, or Landmark">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label class="form-label fw-semibold">Check-in</label>
+                                            <input type="date" class="form-control form-control-lg">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label class="form-label fw-semibold">Check-out</label>
+                                            <input type="date" class="form-control form-control-lg">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-semibold">Guests</label>
+                                            <select class="form-select form-select-lg">
+                                                <option>1 Room, 2 Adults</option>
+                                                <option>1 Room, 1 Adult</option>
+                                                <option>2 Rooms, 4 Adults</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-semibold">&nbsp;</label>
+                                            <button type="submit" class="btn btn-primary btn-lg w-100">
+                                                <i class="bi bi-search"></i> Search Hotels
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            
+                            <div class="tab-pane" id="packages" role="tabpanel">
+                                <div class="search-card bg-white rounded-4 shadow-lg p-4">
+                                    <form class="row g-3">
+                                        <div class="col-md-4">
+                                            <label class="form-label fw-semibold">From</label>
+                                            <input type="text" class="form-control form-control-lg" placeholder="City or Airport">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="form-label fw-semibold">To</label>
+                                            <input type="text" class="form-control form-control-lg" placeholder="City or Airport">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="form-label fw-semibold">Travelers</label>
+                                            <select class="form-select form-select-lg">
+                                                <option>2 Adults</option>
+                                                <option>1 Adult</option>
+                                                <option>3 Adults</option>
+                                                <option>4+ Adults</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-semibold">Depart</label>
+                                            <input type="date" class="form-control form-control-lg">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-semibold">Return</label>
+                                            <input type="date" class="form-control form-control-lg">
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary btn-lg w-100">
+                                                <i class="bi bi-search"></i> Search Packages
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="destinations-section" class="py-5">
+        <div class="container-xxl">
+            <h2 class="display-5 fw-bold mb-4 text-center">Popular Destinations</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="destination-card card border-0 shadow-sm h-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=400" class="card-img-top" alt="Paris" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Paris, France</h5>
+                            <p class="text-muted mb-2">From $299</p>
+                            <small class="text-success"><i class="bi bi-star-fill"></i> 4.8 Rating</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="destination-card card border-0 shadow-sm h-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=400" class="card-img-top" alt="Tokyo" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Tokyo, Japan</h5>
+                            <p class="text-muted mb-2">From $599</p>
+                            <small class="text-success"><i class="bi bi-star-fill"></i> 4.9 Rating</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="destination-card card border-0 shadow-sm h-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?w=400" class="card-img-top" alt="New York" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">New York, USA</h5>
+                            <p class="text-muted mb-2">From $399</p>
+                            <small class="text-success"><i class="bi bi-star-fill"></i> 4.7 Rating</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="destination-card card border-0 shadow-sm h-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400" class="card-img-top" alt="Bali" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Bali, Indonesia</h5>
+                            <p class="text-muted mb-2">From $199</p>
+                            <small class="text-success"><i class="bi bi-star-fill"></i> 4.8 Rating</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="deals-section" class="py-5 bg-light">
+        <div class="container-xxl">
+            <h2 class="display-5 fw-bold mb-4 text-center">Special Deals</h2>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="deal-card card border-0 shadow h-100">
+                        <div class="card-body p-4">
+                            <span class="badge bg-danger mb-3">Limited Time</span>
+                            <h4 class="fw-bold">Save up to 40% on Hotels</h4>
+                            <p class="text-muted">Book now and save on your next hotel stay. Valid for bookings made before end of month.</p>
+                            <a href="#" class="btn btn-outline-primary">View Deals</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="deal-card card border-0 shadow h-100">
+                        <div class="card-body p-4">
+                            <span class="badge bg-success mb-3">New</span>
+                            <h4 class="fw-bold">Flight + Hotel Packages</h4>
+                            <p class="text-muted">Bundle your flight and hotel together and save more. Perfect for your next vacation.</p>
+                            <a href="#" class="btn btn-outline-primary">Explore Packages</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="deal-card card border-0 shadow h-100">
+                        <div class="card-body p-4">
+                            <span class="badge bg-warning mb-3">Hot Deal</span>
+                            <h4 class="fw-bold">Last Minute Deals</h4>
+                            <p class="text-muted">Spontaneous trip? Check out our last-minute deals and grab amazing discounts.</p>
+                            <a href="#" class="btn btn-outline-primary">See Deals</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="wego-features-banner py-5">
+        <div class="container-xxl">
+            <div class="row g-4">
+                
+                <div class="col-md-4">
+                    <div class="feature-panel text-center">
+                        <div class="feature-illustration mb-4">
+                            <div class="illustration-wrapper">
+                                <div class="phone-icon">
+                                    <i class="bi bi-phone display-1 text-dark"></i>
+                                    <div class="deal-badge">
+                                        <i class="bi bi-percent fs-4 text-white"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="fw-bold text-dark mb-2">The best hotel & flight deals in the universe</h4>
+                    </div>
+                </div>
+                
+                
+                <div class="col-md-4">
+                    <div class="feature-panel text-center">
+                        <div class="feature-illustration mb-4">
+                            <div class="illustration-wrapper">
+                                <div class="payment-icons">
+                                    <i class="bi bi-credit-card display-1 text-dark me-3"></i>
+                                    <i class="bi bi-phone display-1 text-warning"></i>
+                                    <div class="check-badge">
+                                        <i class="bi bi-check-circle fs-4 text-success"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="fw-bold text-dark mb-2">Flexible ways to pay</h4>
+                    </div>
+                </div>
+                
+                
+                <div class="col-md-4">
+                    <div class="feature-panel text-center">
+                        <div class="feature-illustration mb-4">
+                            <div class="illustration-wrapper">
+                                <div class="support-icon">
+                                    <i class="bi bi-laptop display-1 text-success"></i>
+                                    <i class="bi bi-headset fs-2 text-dark position-absolute"></i>
+                                    <div class="support-badge">
+                                        <span class="badge-text">24 / 7</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="fw-bold text-dark mb-2">Support that never sleeps, we're with you 24/7</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="app-promotion-section py-5">
+        <div class="container-xxl">
+            <div class="row align-items-center g-5">
+                
+                <div class="col-lg-6 text-center">
+                    <div class="phone-mockup">
+                        <div class="phone-frame">
+                            <div class="phone-screen">
+                                <div class="app-header">
+                                    <div class="app-logo-small">
+                                        <i class="bi bi-airplane-fill text-primary"></i>
+                                        <span class="fw-bold">wego</span>
+                                    </div>
+                                </div>
+                                <div class="app-buttons">
+                                    <button class="app-btn-large">
+                                        <i class="bi bi-airplane-fill text-success"></i>
+                                        <span>Flights</span>
+                                    </button>
+                                    <button class="app-btn-large">
+                                        <i class="bi bi-building text-success"></i>
+                                        <span>Hotels</span>
+                                    </button>
+                                </div>
+                                <div class="app-links">
+                                    <a href="#" class="app-link">Business Travel <i class="bi bi-arrow-right"></i></a>
+                                    <a href="#" class="app-link">Airport Transfers <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                                <div class="app-explore">
+                                    <div class="explore-content">
+                                        <div class="explore-character">
+                                            <i class="bi bi-emoji-smile-fill text-success" style="font-size: 3rem;"></i>
+                                        </div>
+                                        <div class="explore-text">
+                                            <h6 class="fw-bold">Explore</h6>
+                                            <p class="small mb-1">Visa-free Countries</p>
+                                            <p class="small text-muted">7 Destinations from $240</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-lg-6">
+                    <div class="app-promo-content">
+                        <h2 class="display-6 fw-bold mb-4">Globally top-rated and MENA's #1 travel app, with 83M+ downloads</h2>
+                        
+                        <div class="app-features mb-4">
+                            <div class="feature-item d-flex align-items-center mb-3">
+                                <i class="bi bi-check-circle-fill text-success me-3 fs-5"></i>
+                                <span class="fs-5">App-only deals</span>
+                            </div>
+                            <div class="feature-item d-flex align-items-center mb-3">
+                                <i class="bi bi-check-circle-fill text-success me-3 fs-5"></i>
+                                <span class="fs-5">700+ sites in one search</span>
+                            </div>
+                            <div class="feature-item d-flex align-items-center mb-3">
+                                <i class="bi bi-check-circle-fill text-success me-3 fs-5"></i>
+                                <span class="fs-5">Safe, secure bookings</span>
+                            </div>
+                        </div>
+
+                        
+                        <div class="qr-code-wrapper mb-4">
+                            <div class="qr-code-placeholder">
+                                <i class="bi bi-qr-code fs-1 text-dark"></i>
+                                <p class="small text-muted mt-2 mb-0">Scan to download</p>
+                            </div>
+                        </div>
+
+                        
+                        <div class="app-downloads">
+                            
+                            <div class="app-download-item mb-3">
+                                <a href="#" class="app-store-btn app-store-btn-dark d-inline-flex align-items-center">
+                                    <i class="bi bi-apple me-2 fs-4"></i>
+                                    <div class="text-start">
+                                        <small class="d-block" style="font-size: 0.65rem; line-height: 1.2;">Download on the</small>
+                                        <strong style="font-size: 0.85rem;">App Store</strong>
+                                    </div>
+                                </a>
+                                <div class="app-rating mt-2">
+                                    <span class="fw-bold">4.7</span>
+                                    <div class="stars d-inline-block ms-2">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-half text-warning"></i>
+                                    </div>
+                                    <span class="text-muted ms-2 small">236,338+ reviews</span>
+                                </div>
+                            </div>
+
+                            
+                            <div class="app-download-item">
+                                <a href="#" class="app-store-btn app-store-btn-dark d-inline-flex align-items-center">
+                                    <i class="bi bi-google-play me-2 fs-4"></i>
+                                    <div class="text-start">
+                                        <small class="d-block" style="font-size: 0.65rem; line-height: 1.2;">GET IT ON</small>
+                                        <strong style="font-size: 0.85rem;">Google Play</strong>
+                                    </div>
+                                </a>
+                                <div class="app-rating mt-2">
+                                    <span class="fw-bold">4.5</span>
+                                    <div class="stars d-inline-block ms-2">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-half text-warning"></i>
+                                    </div>
+                                    <span class="text-muted ms-2 small">190,226+ reviews</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="bg-dark text-white py-5">
+        <div class="container-xxl">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">
+                        <span class="text-primary">W</span><span class="text-danger">e</span><span class="text-warning">g</span><span class="text-success">o</span>
+                    </h5>
+                    <p class="text-white-50">Your trusted travel companion for finding the best deals on flights, hotels, and vacation packages.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white-50 text-decoration-none">About Us</a></li>
+                        <li><a href="contact.html" class="text-white-50 text-decoration-none">Contact</a></li>
+                        <li><a href="blog.html" class="text-white-50 text-decoration-none">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="help.html" class="text-white-50 text-decoration-none">Help Center</a></li>
+                        <li><a href="contact.html" class="text-white-50 text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Travel</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="flights.html" class="text-white-50 text-decoration-none">Flights</a></li>
+                        <li><a href="hotels.html" class="text-white-50 text-decoration-none">Hotels</a></li>
+                        <li><a href="packages.html" class="text-white-50 text-decoration-none">Packages</a></li>
+                        <li><a href="activities.html" class="text-white-50 text-decoration-none">Activities</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Connect</h6>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white-50"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white-50"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-white-50"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white-50"><i class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-white-50">
+            <div class="text-center text-white-50">
+                <p class="mb-0">&copy; 2024 Wego. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

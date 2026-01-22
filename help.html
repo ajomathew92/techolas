@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center - Wego Travel</title>
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container-xxl">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <span class="text-primary">W</span><span class="text-danger">e</span><span class="text-warning">g</span><span class="text-success">o</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="flights.html"><i class="bi bi-airplane"></i> Flights</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotels.html"><i class="bi bi-building"></i> Hotels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="packages.html"><i class="bi bi-briefcase"></i> Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="activities.html"><i class="bi bi-camera"></i> Activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="deals.html"><i class="bi bi-tag"></i> Deals</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="moreDropdown" role="button">
+                            <i class="bi bi-three-dots"></i> More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+                            <li><a class="dropdown-item" href="about.html"><i class="bi bi-info-circle"></i> About Us</a></li>
+                            <li><a class="dropdown-item" href="contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
+                            <li><a class="dropdown-item active" href="help.html"><i class="bi bi-question-circle"></i> Help</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="blog.html"><i class="bi bi-newspaper"></i> Blog</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a href="signin.html" class="btn btn-outline-primary me-2">
+                        <i class="bi bi-box-arrow-in-right"></i> Sign In
+                    </a>
+                    <a href="signup.html" class="btn btn-primary">
+                        <i class="bi bi-person-plus"></i> Sign Up
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+    <section class="hero-section py-4">
+        <div class="container-xxl">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-4 fw-bold text-white mb-3"><i class="bi bi-question-circle"></i> Help Center</h1>
+                    <p class="lead text-white-50">Find answers to common questions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="py-5">
+        <div class="container-xxl">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="display-6 fw-bold mb-5 text-center">Frequently Asked Questions</h2>
+                    
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item border-0 shadow-sm mb-3 rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    How do I search for flights?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Simply enter your departure and destination cities, select your travel dates, choose the number of travelers, and click "Search Flights". We'll show you the best deals from hundreds of airlines.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item border-0 shadow-sm mb-3 rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Can I book hotels without a flight?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes! You can search and book hotels independently. Just go to the Hotels page, enter your destination and dates, and browse available options.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item border-0 shadow-sm mb-3 rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    What is your cancellation policy?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Cancellation policies vary by booking. Most bookings can be cancelled or modified, but terms depend on the airline, hotel, or travel provider. Check your booking confirmation for specific details.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item border-0 shadow-sm mb-3 rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    How do I contact customer support?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    You can reach our 24/7 customer support team by phone at +1 (555) 123-4567, email at support@wego.com, or by filling out the contact form on our Contact page.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item border-0 shadow-sm mb-3 rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    Do you offer travel insurance?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, we offer travel insurance options during the booking process. Travel insurance can protect you against trip cancellations, medical emergencies, and other unexpected events.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="py-5 bg-light">
+        <div class="container-xxl">
+            <h2 class="display-6 fw-bold mb-4 text-center">Quick Links</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm h-100 text-center">
+                        <div class="card-body">
+                            <i class="bi bi-airplane display-4 text-primary mb-3"></i>
+                            <h5 class="fw-bold">Book a Flight</h5>
+                            <a href="flights.html" class="btn btn-sm btn-outline-primary mt-2">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm h-100 text-center">
+                        <div class="card-body">
+                            <i class="bi bi-building display-4 text-success mb-3"></i>
+                            <h5 class="fw-bold">Find a Hotel</h5>
+                            <a href="hotels.html" class="btn btn-sm btn-outline-primary mt-2">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm h-100 text-center">
+                        <div class="card-body">
+                            <i class="bi bi-envelope display-4 text-warning mb-3"></i>
+                            <h5 class="fw-bold">Contact Support</h5>
+                            <a href="contact.html" class="btn btn-sm btn-outline-primary mt-2">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm h-100 text-center">
+                        <div class="card-body">
+                            <i class="bi bi-tag display-4 text-info mb-3"></i>
+                            <h5 class="fw-bold">View Deals</h5>
+                            <a href="deals.html" class="btn btn-sm btn-outline-primary mt-2">View Deals</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="bg-dark text-white py-5">
+        <div class="container-xxl">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">
+                        <span class="text-primary">W</span><span class="text-danger">e</span><span class="text-warning">g</span><span class="text-success">o</span>
+                    </h5>
+                    <p class="text-white-50">Your trusted travel companion for finding the best deals on flights, hotels, and vacation packages.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white-50 text-decoration-none">About Us</a></li>
+                        <li><a href="contact.html" class="text-white-50 text-decoration-none">Contact</a></li>
+                        <li><a href="blog.html" class="text-white-50 text-decoration-none">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="help.html" class="text-white-50 text-decoration-none">Help Center</a></li>
+                        <li><a href="contact.html" class="text-white-50 text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Travel</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="flights.html" class="text-white-50 text-decoration-none">Flights</a></li>
+                        <li><a href="hotels.html" class="text-white-50 text-decoration-none">Hotels</a></li>
+                        <li><a href="packages.html" class="text-white-50 text-decoration-none">Packages</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Connect</h6>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white-50"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white-50"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-white-50"><i class="bi bi-instagram fs-5"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-white-50">
+            <div class="text-center text-white-50">
+                <p class="mb-0">&copy; 2024 Wego. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
